@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['controller'])&&isset($_GET['action']))
-{   $controll = $_GET['controller'];
+{   $controller = $_GET['controller'];
     $action = $_GET['action'];
 }else
 {   $controller = 'pages';
