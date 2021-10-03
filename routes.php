@@ -8,7 +8,7 @@ function call($controller, $action){
         case "pages":   $controller = new PagesController();
                         break;
     }
-    $controller->{$action()};              
+    $controller->{$action}();              
 }
 
 if(array_key_exists($controller,$controllers))
