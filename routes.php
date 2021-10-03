@@ -1,7 +1,8 @@
 <?php
 $controller = array('pages'=>['home','error']);
 
-function call($controller, $action){
+function call($controller,$action)
+{
     require_once("controllers/".$controller."_controller.php");
     switch($controller)
     {
