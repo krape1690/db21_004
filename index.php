@@ -3,7 +3,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
 {   $controll = $_GET['controller'];
     $action = $_GET['action'];
 }else
-{   $controll = 'pages';
+{   $controller = 'pages';
     $action = 'home';
 }?>
 <html>
