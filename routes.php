@@ -1,7 +1,7 @@
 <?php
-$controller = array('pages'=>['home','error']);
+$controllers = array('pages'=>['home', 'error']); //list controller and action
 
-function call($controller,$action)
+function call($controller, $action)
 {
     require_once("controllers/".$controller."_controller.php");
     switch($controller)
@@ -9,15 +9,18 @@ function call($controller,$action)
         case "pages":   $controller = new PagesController();
                         break;
     }
-    $controller->{$action}();              
+    $controller->{$action}();
 }
 
-if(array_key_exists($controller,$controllers))
-{   if(in_array($action,$controllers[$controller]))
-    {       call($controller,$action);      }
+if(array_key_exists($controller, $controllers))
+{   if(in_array($action, $controllers [$controller]))
+    {   call($controller, $action); }
     else
-    {       call('pages','error');          }
+    {   call('pages', 'error');}
 }
 else
-{   call('pages','error');  }
+{   call('pages', 'error'); }
+
+
+
 ?>
